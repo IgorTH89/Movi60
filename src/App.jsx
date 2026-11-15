@@ -1553,6 +1553,7 @@ function AssistantScreen({ exercise, onBack, palette }) {
     "Quais cuidados devo ter?",
   ]
   const send = async (text = question) => {
+    console.log("[CHAT] Send button pressed");
     if (!text.trim() || loading) return
     setMessages((items) => [...items, { from: "user", text }])
     setQuestion("")
